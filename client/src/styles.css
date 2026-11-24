@@ -1,0 +1,503 @@
+/* =====================================================================
+   Kutubxona tizimi — asosiy uslublar (Bootstrap 5 ustidan)
+   ===================================================================== */
+
+:root {
+  --yon-fon: #14213d;
+  --yon-matn: #c3cbd9;
+  --aksent: #2b8a6e;
+  --aksent-toq: #23735b;
+  --aksent-och: #e6f4ef;
+  --fon: #f3f5f8;
+  --chegara: #e4e8ee;
+  --soya: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+
+  --bs-body-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --bs-body-bg: var(--fon);
+  --bs-link-color-rgb: 43, 138, 110;
+  --bs-link-hover-color-rgb: 35, 115, 91;
+}
+
+/* Bootstrap asosiy rangini o'zimiznikiga almashtiramiz */
+.btn-primary {
+  --bs-btn-bg: var(--aksent);
+  --bs-btn-border-color: var(--aksent);
+  --bs-btn-hover-bg: var(--aksent-toq);
+  --bs-btn-hover-border-color: var(--aksent-toq);
+  --bs-btn-active-bg: var(--aksent-toq);
+  --bs-btn-active-border-color: var(--aksent-toq);
+  --bs-btn-disabled-bg: var(--aksent);
+  --bs-btn-disabled-border-color: var(--aksent);
+}
+.text-primary { color: var(--aksent) !important; }
+.text-bg-primary { background-color: var(--aksent) !important; }
+.spinner-border.text-primary { color: var(--aksent) !important; }
+.progress-bar { background-color: var(--aksent); }
+.form-control:focus,
+.form-select:focus {
+  border-color: #7cc4ab;
+  box-shadow: 0 0 0 0.2rem rgba(43, 138, 110, 0.18);
+}
+.list-group-item.active {
+  background-color: var(--aksent-och);
+  border-color: var(--chegara);
+  color: var(--aksent-toq);
+  font-weight: 600;
+}
+
+/* ---------------- Asosiy tuzilish ---------------- */
+.ilova {
+  display: flex;
+  min-height: 100vh;
+}
+
+.yon-panel {
+  width: 252px;
+  flex-shrink: 0;
+  background: var(--yon-fon);
+  color: var(--yon-matn);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 1.25rem 0.85rem;
+  overflow-y: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 0.6rem 1.25rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.logo i {
+  font-size: 1.6rem;
+  color: #5fd3a7;
+}
+.logo span {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.1;
+}
+.logo small {
+  font-size: 0.75rem;
+  color: #8592a8;
+}
+
+.menyu-bolim {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6c7a93;
+  padding: 1rem 0.75rem 0.4rem;
+}
+
+.menyu-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  margin-bottom: 2px;
+  border-radius: 0.5rem;
+  color: var(--yon-matn);
+  text-decoration: none;
+  font-size: 0.93rem;
+  transition: background-color 0.15s, color 0.15s;
+}
+.menyu-link i {
+  font-size: 1.05rem;
+  width: 1.2rem;
+  text-align: center;
+}
+.menyu-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+.menyu-link.active {
+  background: var(--aksent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.yon-footer {
+  margin-top: auto;
+  padding: 1rem 0.6rem 0;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #6c7a93;
+}
+
+.asosiy {
+  flex: 1;
+  min-width: 0;
+}
+
+.kontent {
+  padding: 2rem 2.25rem;
+  max-width: 1320px;
+}
+
+.yuqori-panel {
+  display: none;
+}
+
+/* ---------------- Sahifa sarlavhasi ---------------- */
+.sahifa-sarlavha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.sahifa-sarlavha h1 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin: 0;
+  color: #101828;
+}
+.sahifa-sarlavha p {
+  margin: 0.15rem 0 0;
+  color: #667085;
+  font-size: 0.93rem;
+}
+.sarlavha-ikon {
+  width: 46px;
+  height: 46px;
+  border-radius: 0.75rem;
+  display: grid;
+  place-items: center;
+  background: var(--aksent-och);
+  color: var(--aksent);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+/* ---------------- Kartalar ---------------- */
+.karta {
+  background: #fff;
+  border: 1px solid var(--chegara);
+  border-radius: 0.85rem;
+  box-shadow: var(--soya);
+  overflow: hidden;
+}
+.karta-bosh {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+}
+.karta-sarlavha {
+  font-size: 1rem;
+  font-weight: 650;
+  margin: 0;
+}
+
+.stat-panjara {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.stat-karta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.2rem;
+}
+.stat-ikon {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.75rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+.rang-kok { background: #e8f0fe; color: #2f6fde; }
+.rang-binafsha { background: #f1ebfd; color: #7247d6; }
+.rang-yashil { background: var(--aksent-och); color: var(--aksent); }
+.rang-sariq { background: #fff4e0; color: #d4870b; }
+.rang-qizil { background: #fdecec; color: #d63b3b; }
+.stat-qiymat {
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #101828;
+}
+.stat-nom {
+  color: #667085;
+  font-size: 0.86rem;
+}
+.stat-izoh {
+  color: #98a2b3;
+  font-size: 0.76rem;
+}
+
+/* ---------------- Jadvallar ---------------- */
+.table {
+  --bs-table-hover-bg: #f7f9fb;
+}
+.table > :not(caption) > * > * {
+  padding: 0.7rem 1rem;
+  border-color: #eef1f5;
+}
+.table thead th {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #667085;
+  font-weight: 600;
+  background: #f8fafc;
+  white-space: nowrap;
+}
+.table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+.qator-kechikkan > * {
+  background-color: #fff7f7 !important;
+}
+
+.yorliq {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  background: #f2f4f7;
+  color: #344054;
+  white-space: nowrap;
+}
+
+.bosh-holat {
+  text-align: center;
+  color: #98a2b3;
+  padding: 2.5rem 1rem !important;
+  margin: 0;
+}
+.bosh-holat i {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ---------------- Qidiruv va filtrlar ---------------- */
+.qidiruv {
+  position: relative;
+  flex: 0 1 300px;
+}
+.qidiruv i {
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #98a2b3;
+  pointer-events: none;
+}
+.qidiruv .form-control {
+  padding-left: 2.2rem;
+}
+
+.filtrlar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  background: #f2f4f7;
+  padding: 0.25rem;
+  border-radius: 0.6rem;
+}
+.filtr {
+  border: 0;
+  background: transparent;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.45rem;
+  font-size: 0.86rem;
+  color: #475467;
+}
+.filtr:hover {
+  color: #101828;
+}
+.filtr.faol {
+  background: #fff;
+  color: #101828;
+  font-weight: 600;
+  box-shadow: var(--soya);
+}
+.filtr-son {
+  display: inline-block;
+  min-width: 1.4rem;
+  margin-left: 0.25rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background: #e4e7ec;
+  font-size: 0.72rem;
+}
+
+/* ---------------- Bosh sahifa ro'yxati ---------------- */
+.mashhur-royxat {
+  list-style: none;
+  counter-reset: raqam;
+  padding: 0 1rem 0.5rem;
+  margin: 0;
+}
+.mashhur-royxat li {
+  counter-increment: raqam;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid #f0f2f5;
+}
+.mashhur-royxat li::before {
+  content: counter(raqam);
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--aksent-och);
+  color: var(--aksent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.mashhur-royxat li > div {
+  flex: 1;
+}
+
+/* ---------------- Baza sxemasi ---------------- */
+.sxema-panjara {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1rem;
+}
+.sxema-bosh {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0.9rem;
+  background: var(--yon-fon);
+  color: #fff;
+  font-weight: 600;
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+}
+.sxema-bosh small {
+  color: #8fa0bb;
+  font-weight: 400;
+  font-family: var(--bs-body-font-family);
+}
+.sxema-ustun {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  border-top: 1px solid #f0f2f5;
+  font-size: 0.88rem;
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+}
+.sql-details {
+  border: 1px solid var(--chegara);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.sql-details summary {
+  padding: 0.55rem 0.8rem;
+  cursor: pointer;
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  font-size: 0.9rem;
+}
+.sql-details pre {
+  margin: 0;
+  padding: 0.8rem;
+  background: #0f172a;
+  color: #d5e1f5;
+  font-size: 0.8rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  white-space: pre-wrap;
+}
+
+/* ---------------- SQL konsol ---------------- */
+.sql-maydon {
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  font-size: 0.88rem;
+  background: #0f172a;
+  color: #d5e1f5;
+  border-color: #0f172a;
+}
+.sql-maydon:focus {
+  background: #0f172a;
+  color: #fff;
+}
+.natija-jadval {
+  max-height: 420px;
+  border-top: 1px solid var(--chegara);
+}
+.natija-jadval thead th {
+  position: sticky;
+  top: 0;
+}
+
+/* ---------------- Modal va xabarlar ---------------- */
+.modal-fon {
+  background: rgba(15, 23, 42, 0.5);
+  animation: paydo 0.15s ease-out;
+}
+@keyframes paydo {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.xabarlar {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2000;
+  width: min(380px, calc(100vw - 2rem));
+}
+.xabarlar .alert {
+  animation: paydo 0.2s ease-out;
+}
+
+/* ---------------- Mobil moslashuv ---------------- */
+@media (max-width: 991.98px) {
+  .yon-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1050;
+    transform: translateX(-100%);
+    transition: transform 0.22s ease;
+  }
+  .yon-panel.ochiq {
+    transform: none;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  }
+  .parda {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 1040;
+  }
+  .yuqori-panel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.75rem;
+    background: #fff;
+    border-bottom: 1px solid var(--chegara);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .kontent {
+    padding: 1.25rem 1rem;
+  }
+  .qidiruv {
+    flex: 1 1 100%;
+  }
+}
