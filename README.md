@@ -79,6 +79,16 @@ Birinchi ishga tushishda `data/kutubxona.db` fayli avtomatik yaratiladi va namun
 | `npm run server` | Faqat serverni ishga tushirish (oldin `build` qilingan bo'lishi kerak) |
 | `npm run db:reset` | Bazani boshlang'ich holatga qaytarish |
 
+## Internetga joylash (Render.com, bepul)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/ziyadullayev401/kutubxona-tizimi)
+
+Sozlamalar [`render.yaml`](render.yaml) faylida. Tugmani bosib, GitHub orqali kiring va **Deploy Blueprint** ni tasdiqlang.
+
+Bepul tarifning cheklovlari:
+- 15 daqiqa hech kim kirmasa, server "uxlaydi". Keyingi ochilishda 30–60 soniyada uyg'onadi.
+- Server qayta ishga tushganda baza namuna ma'lumotlar bilan boshlang'ich holatiga qaytadi.
+
 ## Loyiha tuzilishi
 
 ```

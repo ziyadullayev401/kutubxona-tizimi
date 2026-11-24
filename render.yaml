@@ -1,0 +1,16 @@
+# Render.com uchun sozlama (Blueprint): bepul veb-xizmat
+services:
+  - type: web
+    name: kutubxona-tizimi
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm run server
+    healthCheckPath: /api/statistika
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: TZ
+        value: Asia/Tashkent
