@@ -1,5 +1,7 @@
 # Kutubxona boshqaruv tizimi
 
+**Jonli sayt:** https://kutubxona-tizimi.onrender.com
+
 **Fan:** Veb tizimlari · **Ish turi:** Laboratoriya ishi (1-qaydnoma)
 
 **Topshiriq:** HTML5 asoslari, CSS, frontend frameworklar asosida JavaScript'da veb-tizim qurish. Tizimda relatsion SQL ma'lumotlar bazasi bo'lishi kerak.
